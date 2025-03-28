@@ -1,0 +1,9 @@
+package test;
+
+import dao.DogDAO;
+
+public class TestDog {
+	public static void main(String[] args) {
+		DogDAO dogDAO = new DogDAO();
+	}
+}

@@ -1,0 +1,9 @@
+package dao;
+
+import java.util.List;
+
+import model.Cat;
+
+public interface DAOInterface <T>{
+	public List<Cat> selectAll();
+}

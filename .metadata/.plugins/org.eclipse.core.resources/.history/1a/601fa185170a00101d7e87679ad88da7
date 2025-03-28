@@ -1,0 +1,39 @@
+package dao;
+
+import java.util.List;
+
+import model.Cat;
+
+public class CatDAO implements DAOInterface<Cat>{
+
+	@Override
+	public List<Cat> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cat selectById(Cat t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean insert(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

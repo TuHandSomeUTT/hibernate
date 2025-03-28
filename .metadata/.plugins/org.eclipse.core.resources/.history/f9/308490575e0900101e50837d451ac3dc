@@ -1,0 +1,14 @@
+package test;
+
+import org.hibernate.SessionFactory;
+
+import util.HibernateUtil;
+
+public class TestDog {
+	public static void main(String[] args) {
+		try {
+			SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		} finally {
+		}
+	}
+}

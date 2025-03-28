@@ -1,0 +1,15 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.CatDAO;
+import model.Cat;
+
+public class TestCat {
+	public static void main(String[] args) {
+		CatDAO cd1 = new CatDAO();
+		
+		List<Cat> list = new ArrayList<>();
+	}
+}

@@ -1,0 +1,17 @@
+package test;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import model.Dog;
+import util.HibernateUtil;
+
+public class TestDog {
+	public static void main(String[] args) {
+		
+	}
+}

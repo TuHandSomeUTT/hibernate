@@ -1,0 +1,17 @@
+package test;
+
+import java.util.List;
+
+import dao.CatDAO;
+import model.Cat;
+
+public class TestCat {
+	public static void main(String[] args) {
+		CatDAO cd = new CatDAO();
+		
+		List<Cat> list = cd.selectAll();
+		for(Cat c: list) {
+			System.out.println(c.toString());
+		}
+	}
+}

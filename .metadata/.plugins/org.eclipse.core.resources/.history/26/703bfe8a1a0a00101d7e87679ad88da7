@@ -1,0 +1,14 @@
+package test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import model.Cat;
+import util.HibernateUtil;
+
+public class TestCat {
+	public static void main(String[] args) {
+		
+	}
+}

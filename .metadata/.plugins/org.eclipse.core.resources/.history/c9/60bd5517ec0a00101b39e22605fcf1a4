@@ -1,0 +1,10 @@
+package test;
+
+import dao.CatDAO;
+import model.Cat;
+
+public class TestCat {
+	public static void main(String[] args) {
+		CatDAO cd1 = new CatDAO();
+	}
+}

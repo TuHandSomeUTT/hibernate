@@ -1,0 +1,15 @@
+package test;
+
+import java.util.List;
+
+import dao.DogDAO;
+import model.Dog;
+
+public class TestDog {
+	public static void main(String[] args) {
+		DogDAO dogDAO = new DogDAO();
+		
+		List<Dog> list = dogDAO.selectAll();
+		for ()
+	}
+}

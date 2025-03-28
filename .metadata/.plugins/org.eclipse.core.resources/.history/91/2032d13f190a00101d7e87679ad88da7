@@ -1,0 +1,65 @@
+package dao;
+
+import java.util.List;
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import model.Cat;
+import util.HibernateUtil;
+
+public class CatDAO implements DAOInterface<Cat>{
+
+	@Override
+	public List<Cat> selectAll() {
+		ArrayList<Cat> result = new ArrayList<Cat>();
+		try {
+			SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+			if(sessionFactory != null) {
+				// 1) Open session
+				Session session = sessionFactory.openSession();
+				// 2) Create transaction
+				Transaction transaction = session.beginTransaction();
+				// 3) Execute HQL
+				String HqlQuery = "FROM Cat"; // tương đương câu lệnh SELECT * FROM CAT
+				Query query = session.createQuery(HqlQuery); // Có thể truyền thẳng SQLQuery vào method này cũng OK
+				result = query.getResultList();
+				// Save
+				transaction.commit();
+				session.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public Cat selectById(Cat t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean insert(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Cat t) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
