@@ -1,1 +1,84 @@
-/.metadata/
+# ==============================
+# 🔧 IDEs
+# ==============================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ==============================
+# 🔨 Build Systems
+# ==============================
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+
+# ==============================
+# ⚙️ Hibernate & DB
+# ==============================
+
+# File database tạm
+*.db
+*.sqlite
+*.h2.db
+
+# File config cá nhân
+hibernate.cfg.xml  # Nếu chứa thông tin mật (tùy bạn giữ hay không)
+*.log
+*.tmp
+
+# ==============================
+# 🧪 Other junk
+# ==============================
+
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+# ==============================
+# ✅ OS-specific
+# ==============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.metadata/
