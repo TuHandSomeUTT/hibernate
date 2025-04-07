@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/example_one_to_many</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<!-- Cái này dùng để xóa database và tạo lại database từ đầu, cái này phù hợp cho test thôi
+		<property name="hibernate.hbm2ddl.auto" >create-drop</property> -->
+		
+		<!-- Cập nhật các thông tin mới vào db -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- Show sql query -->
+		<property name="show_sql">true</property>
+		
+		<!-- Mapping. Trong mối quan hệ many to one, ta cho ông one đứng trước rồi đến many-->
+		<mapping class="model.Customer"/> <!-- One. 1 khách hàng mua nhiều đơn hàng -->
+		<mapping class="model.Orders"/> <!-- Many. Nhiều đơn hàng được mua bởi 1 (hoặc nhiều) người. Bài này học one to many nên nhiều đh được mua bởi 1 người-->
+	</session-factory>
+</hibernate-configuration>
