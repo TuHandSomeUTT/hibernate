@@ -12,15 +12,27 @@ public class Customer {
 	private String id;
 	private String name;
 	private String email;
-	
-	/*Customer phải có trước rồi mới sinh ra các orders. Mapped by này nói cho Hibernate
-	 * hiểu rằng phải có customer thì mới sinh ra orders được*/
-	@OneToMany(mappedBy = "customer") // cái này liên kết với trường customer bên class My_Order để tạo ra MQH One to many
-	/*Lỗi sai ngớ ngẩn :)))
-	 * Khi dùng mappedBy, luôn luôn soi lại tên biến bên class còn lại. 
-	 * Không phải tên class, không phải tên cột DB, mà tên cái biến mình khai báo.*/
+
+	/*
+	 * Customer phải có trước rồi mới sinh ra các orders. Mapped by này nói cho
+	 * Hibernate hiểu rằng phải có customer thì mới sinh ra orders được
+	 */
+	@OneToMany(mappedBy = "customer") // cái này liên kết với trường customer bên class My_Order để tạo ra MQH One to
+										// many
+	/*
+	 * Lỗi sai ngớ ngẩn :))) Khi dùng mappedBy, luôn luôn soi lại tên biến bên class
+	 * còn lại. Không phải tên class, không phải tên cột DB, mà tên cái biến mình
+	 * khai báo. 
+	 * 🧠 1. Khái niệm mappedBy là gì? Trong mối quan hệ hai chiều
+	 * (bidirectional) giữa 2 entity, ta phải chỉ rõ ai là chủ sở hữu (owner) của
+	 * mối quan hệ và ai là bên bị sở hữu (inverse/non-owning). Và mappedBy chính là
+	 * cách Hibernate biết bên nào không sở hữu mối quan hệ.
+	 * 
+	 * mappedBy = "tên biến bên kia" là cách bạn nói với Hibernate rằng: 👉
+	 * "Tao không phải là chủ mối quan hệ này đâu, bên kia mới là người lưu thông tin liên kết."
+	 */
 	List<My_Order> my_order;
-	
+
 	public Customer() {
 	}
 
